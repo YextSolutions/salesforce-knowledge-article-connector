@@ -1,0 +1,12 @@
+{
+  "$id": "salesforceKnowledge_isVisibleInApp",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
+  "displayName": "Is Visible In App",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "booleanType": {}
+  },
+  "typeId": "boolean"
+}

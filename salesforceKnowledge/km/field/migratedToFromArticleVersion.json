@@ -1,0 +1,14 @@
+{
+  "$id": "salesforceKnowledge_migratedToFromArticleVersion",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
+  "displayName": "Migrated To From Article Version",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "stringType": {
+      "stereotype": "SIMPLE"
+    }
+  },
+  "typeId": "string"
+}

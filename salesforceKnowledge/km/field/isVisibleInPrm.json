@@ -1,0 +1,12 @@
+{
+  "$id": "salesforceKnowledge_isVisibleInPrm",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
+  "displayName": "Is Visible In PRM",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "booleanType": {}
+  },
+  "typeId": "boolean"
+}

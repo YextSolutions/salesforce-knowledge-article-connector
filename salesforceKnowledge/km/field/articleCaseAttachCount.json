@@ -1,0 +1,12 @@
+{
+  "$id": "salesforceKnowledge_articleCaseAttachCount",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
+  "displayName": "Article Case Attach Count",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "decimalType": {}
+  },
+  "typeId": "decimal"
+}

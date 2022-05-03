@@ -1,0 +1,12 @@
+{
+  "$id": "salesforceKnowledge_isVisibleInPkb",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "description": "",
+  "displayName": "Is Visible In PKB",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "booleanType": {}
+  },
+  "typeId": "boolean"
+}

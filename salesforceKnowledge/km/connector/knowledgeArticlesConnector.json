@@ -1,0 +1,454 @@
+{
+  "$id": "salesforceKnowledge_knowledgeArticlesConnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v3",
+  "displayName": "Salesforce Knowledge Articles Connector",
+  "entityType": "salesforceKnowledge_knowledgeArticle",
+  "source": {
+    "sourceConfig": {
+      "nativeSourceConfig": {
+        "source": "salesforce",
+        "operation": "fetchObjects",
+        "inputs": {
+          "instanceUrl": "https://csyextqa-dev-ed.lightning.force.com",
+          "object": "Knowledge__kav",
+          "salesforceLinkedAccount": "58"
+        }
+      }
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "Id",
+        "path": "Id"
+      },
+      {
+        "type": "JSON",
+        "header": "ArchivedById",
+        "path": "ArchivedById"
+      },
+      {
+        "type": "JSON",
+        "header": "ArchivedDate",
+        "path": "ArchivedDate"
+      },
+      {
+        "type": "JSON",
+        "header": "ArticleArchivedById",
+        "path": "ArticleArchivedById"
+      },
+      {
+        "type": "JSON",
+        "header": "ArticleArchivedDate",
+        "path": "ArticleArchivedDate"
+      },
+      {
+        "type": "JSON",
+        "header": "ArticleCaseAttachCount",
+        "path": "ArticleCaseAttachCount"
+      },
+      {
+        "type": "JSON",
+        "header": "ArticleCreatedById",
+        "path": "ArticleCreatedById"
+      },
+      {
+        "type": "JSON",
+        "header": "ArticleCreatedDate",
+        "path": "ArticleCreatedDate"
+      },
+      {
+        "type": "JSON",
+        "header": "ArticleMasterLanguage",
+        "path": "ArticleMasterLanguage"
+      },
+      {
+        "type": "JSON",
+        "header": "ArticleNumber",
+        "path": "ArticleNumber"
+      },
+      {
+        "type": "JSON",
+        "header": "ArticleTotalViewCount",
+        "path": "ArticleTotalViewCount"
+      },
+      {
+        "type": "JSON",
+        "header": "AssignedById",
+        "path": "AssignedById"
+      },
+      {
+        "type": "JSON",
+        "header": "AssignedToId",
+        "path": "AssignedToId"
+      },
+      {
+        "type": "JSON",
+        "header": "AssignmentDate",
+        "path": "AssignmentDate"
+      },
+      {
+        "type": "JSON",
+        "header": "AssignmentDueDate",
+        "path": "AssignmentDueDate"
+      },
+      {
+        "type": "JSON",
+        "header": "AssignmentNote",
+        "path": "AssignmentNote"
+      },
+      {
+        "type": "JSON",
+        "header": "FirstPublishedDate",
+        "path": "FirstPublishedDate"
+      },
+      {
+        "type": "JSON",
+        "header": "IsLatestVersion",
+        "path": "IsLatestVersion"
+      },
+      {
+        "type": "JSON",
+        "header": "IsMasterLanguage",
+        "path": "IsMasterLanguage"
+      },
+      {
+        "type": "JSON",
+        "header": "IsOutOfDate",
+        "path": "IsOutOfDate"
+      },
+      {
+        "type": "JSON",
+        "header": "IsVisibleInApp",
+        "path": "IsVisibleInApp"
+      },
+      {
+        "type": "JSON",
+        "header": "IsVisibleInCsp",
+        "path": "IsVisibleInCsp"
+      },
+      {
+        "type": "JSON",
+        "header": "IsVisibleInPkb",
+        "path": "IsVisibleInPkb"
+      },
+      {
+        "type": "JSON",
+        "header": "IsVisibleInPrm",
+        "path": "IsVisibleInPrm"
+      },
+      {
+        "type": "JSON",
+        "header": "KnowledgeArticleId",
+        "path": "KnowledgeArticleId"
+      },
+      {
+        "type": "JSON",
+        "header": "Language",
+        "path": "Language"
+      },
+      {
+        "type": "JSON",
+        "header": "LastPublishedDate",
+        "path": "LastPublishedDate"
+      },
+      {
+        "type": "JSON",
+        "header": "MasterVersionId",
+        "path": "MasterVersionId"
+      },
+      {
+        "type": "JSON",
+        "header": "MigratedToFromArticleVersion",
+        "path": "MigratedToFromArticleVersion"
+      },
+      {
+        "type": "JSON",
+        "header": "OwnerId",
+        "path": "OwnerId"
+      },
+      {
+        "type": "JSON",
+        "header": "PublishStatus",
+        "path": "PublishStatus"
+      },
+      {
+        "type": "JSON",
+        "header": "RecordTypeId",
+        "path": "RecordTypeId"
+      },
+      {
+        "type": "JSON",
+        "header": "SourceId",
+        "path": "SourceId"
+      },
+      {
+        "type": "JSON",
+        "header": "Summary",
+        "path": "Summary"
+      },
+      {
+        "type": "JSON",
+        "header": "Title",
+        "path": "Title"
+      },
+      {
+        "type": "JSON",
+        "header": "TranslationCompletedDate",
+        "path": "TranslationCompletedDate"
+      },
+      {
+        "type": "JSON",
+        "header": "TranslationExportedDate",
+        "path": "TranslationExportedDate"
+      },
+      {
+        "type": "JSON",
+        "header": "TranslationImportedDate",
+        "path": "TranslationImportedDate"
+      },
+      {
+        "type": "JSON",
+        "header": "UrlName",
+        "path": "UrlName"
+      },
+      {
+        "type": "JSON",
+        "header": "ValidationStatus",
+        "path": "ValidationStatus"
+      },
+      {
+        "type": "JSON",
+        "header": "VersionNumber",
+        "path": "VersionNumber"
+      }
+    ]
+  },
+  "transforms": [
+    {
+      "formatDates": {
+        "inputHeaders": {
+          "headers": [
+            "ArchivedDate",
+            "ArticleArchivedDate",
+            "ArticleCreatedDate",
+            "AssignmentDate",
+            "AssignmentDueDate",
+            "FirstPublishedDate",
+            "LastPublishedDate",
+            "TranslationCompletedDate",
+            "TranslationExportedDate",
+            "TranslationImportedDate"
+          ]
+        },
+        "inputFormat": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSX"
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "field": "entityId",
+      "header": "Id",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_archivedById",
+      "header": "ArchivedById",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_archivedDate",
+      "header": "ArchivedDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_articleArchivedById",
+      "header": "ArticleArchivedById",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_articleArchivedDate",
+      "header": "ArticleArchivedDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_articleCaseAttachCount",
+      "header": "ArticleCaseAttachCount",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_articleCreatedById",
+      "header": "ArticleCreatedById",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_articleCreatedDate",
+      "header": "ArticleCreatedDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_articleMasterLanguage",
+      "header": "ArticleMasterLanguage",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_articleNumber",
+      "header": "ArticleNumber",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_articleTotalViewCount",
+      "header": "ArticleTotalViewCount",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_assignedById",
+      "header": "AssignedById",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_assignedToId",
+      "header": "AssignedToId",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_assignmentDate",
+      "header": "AssignmentDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_assignmentDueDate",
+      "header": "AssignmentDueDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_assignmentNote",
+      "header": "AssignmentNote",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_firstPublishedDate",
+      "header": "FirstPublishedDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_isLatestVersion",
+      "header": "IsLatestVersion",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_isMasterLanguage",
+      "header": "IsMasterLanguage",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_isOutOfDate",
+      "header": "IsOutOfDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_isVisibleInApp",
+      "header": "IsVisibleInApp",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_isVisibleInCsp",
+      "header": "IsVisibleInCsp",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_isVisibleInPkb",
+      "header": "IsVisibleInPkb",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_isVisibleInPrm",
+      "header": "IsVisibleInPrm",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_knowledgeArticleId",
+      "header": "KnowledgeArticleId",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_language",
+      "header": "Language",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_lastPublishedDate",
+      "header": "LastPublishedDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_masterVersionId",
+      "header": "MasterVersionId",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_migratedToFromArticleVersion",
+      "header": "MigratedToFromArticleVersion",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_ownerId",
+      "header": "OwnerId",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_publishStatus",
+      "header": "PublishStatus",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_recordTypeId",
+      "header": "RecordTypeId",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_sourceId",
+      "header": "SourceId",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_summary",
+      "header": "Summary",
+      "subfieldPath": []
+    },
+    {
+      "field": "name",
+      "header": "Title",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_translationCompletedDate",
+      "header": "TranslationCompletedDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_translationExportedDate",
+      "header": "TranslationExportedDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_translationImportedDate",
+      "header": "TranslationImportedDate",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_urlName",
+      "header": "UrlName",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_validationStatus",
+      "header": "ValidationStatus",
+      "subfieldPath": []
+    },
+    {
+      "field": "salesforceKnowledge_versionNumber",
+      "header": "VersionNumber",
+      "subfieldPath": []
+    }
+  ]
+}
