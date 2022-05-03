@@ -1,1 +1,0 @@
-# salesforce-knowledge-article-connector
