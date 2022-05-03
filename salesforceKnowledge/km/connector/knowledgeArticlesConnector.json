@@ -9,9 +9,9 @@
         "source": "salesforce",
         "operation": "fetchObjects",
         "inputs": {
-          "instanceUrl": "https://csyextqa-dev-ed.lightning.force.com",
+          "instanceUrl": "${{salesforceInstanceUrl}}",
           "object": "Knowledge__kav",
-          "salesforceLinkedAccount": "58"
+          "salesforceLinkedAccount": "${{salesforceLinkedAccountId}}"
         }
       }
     },
