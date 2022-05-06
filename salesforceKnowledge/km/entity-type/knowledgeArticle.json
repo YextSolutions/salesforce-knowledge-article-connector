@@ -1,7 +1,0 @@
-{
-  "$id": "salesforceKnowledge_knowledgeArticle",
-  "$schema": "https://schema.yext.com/config/km/entity-type/v2",
-  "description": "Use this entity type for your Salesforce Knowledge Articles!",
-  "displayName": "Salesforce Knowledge Article",
-  "pluralDisplayName": "Salesforce Knowledge Articles"
-}
