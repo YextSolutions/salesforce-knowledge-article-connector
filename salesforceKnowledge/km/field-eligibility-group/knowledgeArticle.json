@@ -2,7 +2,7 @@
   "$id": "salesforceKnowledge_knowledgeArticle",
   "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
   "name": "Salesforce Knowledge Article",
-  "entityType": "salesforceKnowledge_knowledgeArticle",
+  "entityType": "helpArticle",
   "fields": [
     "salesforceKnowledge_archivedById",
     "salesforceKnowledge_archivedDate",
