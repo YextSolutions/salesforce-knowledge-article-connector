@@ -2,7 +2,7 @@
   "$id": "salesforceKnowledge_knowledgeArticlesConnector",
   "$schema": "https://schema.yext.com/config/km/connector/v3",
   "displayName": "Salesforce Knowledge Articles Connector",
-  "entityType": "salesforceKnowledge_knowledgeArticle",
+  "entityType": "helpArticle",
   "source": {
     "sourceConfig": {
       "nativeSourceConfig": {
