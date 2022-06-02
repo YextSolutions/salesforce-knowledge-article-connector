@@ -242,6 +242,22 @@
         },
         "inputFormat": "yyyy-MM-dd\u0027T\u0027HH:mm:ss.SSSX"
       }
+    },
+    {
+      "addColumn": {
+        "newColumnHeader": "Experience Cloud URL",
+        "columnValue": "${{experienceCloudUrl}}/s/article/"
+      }
+    },
+    {
+      "mergeColumns": {
+        "inputHeaders": [
+          "Experience Cloud URL",
+          "UrlName"
+        ],
+        "newColumnHeader": "Landing Page Url",
+        "delimiter": ""
+      }
     }
   ],
   "mappings": [
@@ -376,7 +392,7 @@
       "subfieldPath": []
     },
     {
-      "field": "salesforceKnowledge_lastPublishedDate",
+      "field": "externalArticleUpdateDate",
       "header": "LastPublishedDate",
       "subfieldPath": []
     },
@@ -448,6 +464,11 @@
     {
       "field": "salesforceKnowledge_versionNumber",
       "header": "VersionNumber",
+      "subfieldPath": []
+    },
+    {
+      "field": "landingPageUrl",
+      "header": "Landing Page Url",
       "subfieldPath": []
     }
   ],
