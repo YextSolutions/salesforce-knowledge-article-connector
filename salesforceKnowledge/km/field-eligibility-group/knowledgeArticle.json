@@ -29,7 +29,6 @@
     "salesforceKnowledge_isVisibleInPrm",
     "salesforceKnowledge_knowledgeArticleId",
     "salesforceKnowledge_language",
-    "salesforceKnowledge_lastPublishedDate",
     "salesforceKnowledge_masterVersionId",
     "salesforceKnowledge_migratedToFromArticleVersion",
     "salesforceKnowledge_ownerId",
